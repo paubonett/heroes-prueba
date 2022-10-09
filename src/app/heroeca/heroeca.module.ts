@@ -4,13 +4,15 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 
 import { heroecaService } from './services/heroeca.service';
 import { superheroesComponent } from './superheroes/superheroes.component';
+import { PruComponent } from './pru/pru.component';
 
 
 
 @NgModule({
   declarations: [
     MainpageComponent,
-    superheroesComponent
+    superheroesComponent,
+    PruComponent
   ],
   
   imports: [
