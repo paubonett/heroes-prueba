@@ -4,8 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { contadorModule } from './contador/contador.module';
 import { DbzModule } from './dbz/dbz.module';
+import { HeroecaModule } from './heroeca/heroeca.module';
 
 import { HeroesModule } from './heroes/heroes.module';
+import { PruebaModule } from './prueba/prueba.module';
 
 
 
@@ -19,7 +21,11 @@ import { HeroesModule } from './heroes/heroes.module';
     BrowserModule,
     HeroesModule,
     contadorModule,
-    DbzModule
+    DbzModule,
+    HeroesModule,
+    HeroecaModule,
+    PruebaModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,9 +1,14 @@
-<h3> Personajes</h3>
 <hr>
 <ul>
-    <li *ngFor="let personaje of superheroe">
-            {{personaje.nombre}}-{{personaje.bio}}
-    </li>
+    <div class="card" id="prueba222" style="width: 18rem;" *ngFor="let personaje of superheroe">
+        <img src="{{personaje.img}}" class="card-img-top" >
+        <div class="card-body">
+            <h3 class="card-title">{{personaje.nombre}}</h3>
+            <p class>Tipo:{{personaje.bio}}</p>
+            <p class>Fecha: {{personaje.aparicion}}</p>
+            <p class>precio: {{personaje.casa}}</p>
+            <p ><button class="btn btn-danger" type="button" onclick="Carrito('${persona.id}')">Carrito</button></p>
+            </div>
+            </div><br>
            
-</ul>
-        
+</ul> 

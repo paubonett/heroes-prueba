@@ -4,7 +4,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 
 import { heroecaService } from './services/heroeca.service';
 import { superheroesComponent } from './superheroes/superheroes.component';
-import { PruComponent } from './pru/pru.component';
+
 
 
 
@@ -12,7 +12,7 @@ import { PruComponent } from './pru/pru.component';
   declarations: [
     MainpageComponent,
     superheroesComponent,
-    PruComponent
+    
   ],
   
   imports: [
