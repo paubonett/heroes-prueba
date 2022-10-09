@@ -1,14 +1,19 @@
 <hr>
 <ul>
-    <div class="card" id="prueba222" style="width: 18rem;" *ngFor="let personaje of superheroe">
+    <div class="container">
+    <div class="card" style="width: 18rem;" *ngFor="let personaje of superheroe">
         <img src="{{personaje.img}}" class="card-img-top" >
         <div class="card-body">
-            <h3 class="card-title">{{personaje.nombre}}</h3>
-            <p class>Tipo:{{personaje.bio}}</p>
-            <p class>Fecha: {{personaje.aparicion}}</p>
-            <p class>precio: {{personaje.casa}}</p>
-            <p ><button class="btn btn-danger" type="button" onclick="Carrito('${persona.id}')">Carrito</button></p>
+
+            <h3 class="card-title">{{personaje.nombre}}</h3><br>
+
+            <p class>Biografia:{{personaje.bio}}</p><br>
+
+            <p class>Aparicion: {{personaje.aparicion}}</p><br>
+
+            <p class>Casa: {{personaje.casa}}</p>
             </div>
-            </div><br>
+            </div>
+        </div><br>
            
 </ul> 

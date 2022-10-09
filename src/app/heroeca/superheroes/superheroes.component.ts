@@ -5,6 +5,7 @@ import { heroecaService } from '../services/heroeca.service';
 @Component({
   selector: 'app-superheroes',
   templateUrl: './superheroes.component.html',
+  styleUrls: ['./app.component.css']
   
 })
 export  class superheroesComponent {
