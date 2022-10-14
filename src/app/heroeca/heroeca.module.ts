@@ -4,6 +4,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 
 import { heroecaService } from './services/heroeca.service';
 import { superheroesComponent } from './superheroes/superheroes.component';
+import { PrinComponent } from './prin/prin.component';
+import { ModalComponent } from './modal/modal.component';
 
 
 
@@ -12,6 +14,8 @@ import { superheroesComponent } from './superheroes/superheroes.component';
   declarations: [
     MainpageComponent,
     superheroesComponent,
+    PrinComponent,
+    ModalComponent
     
   ],
   
@@ -19,7 +23,8 @@ import { superheroesComponent } from './superheroes/superheroes.component';
     CommonModule
   ],
   exports: [
-    MainpageComponent
+    MainpageComponent,
+    ModalComponent
   ],
   providers:[
     heroecaService

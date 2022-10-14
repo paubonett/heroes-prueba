@@ -1,19 +1,27 @@
 <hr>
 <ul>
-    <div class="container">
+    <!--<h2>Lista de Superheroes</h2>
+    <li *ngFor="let personaje of superheroe">{{personaje.nombre}} <button (click)="ver()">Ver detalles</button></li>-->
+    
+    <div class="container" id="info">
     <div class="card" style="width: 18rem;" *ngFor="let personaje of superheroe">
         <img src="{{personaje.img}}" class="card-img-top" >
         <div class="card-body">
 
-            <h3 class="card-title">{{personaje.nombre}}</h3><br>
+            <h5 class="card-title" >{{personaje.nombre}}</h5><br>
+            
 
-            <p class>Biografia:{{personaje.bio}}</p><br>
 
-            <p class>Aparicion: {{personaje.aparicion}}</p><br>
+             
+             <button type="button" (click)="ver()" style="margin: 10px;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Ver Detalles
+              </button>
 
-            <p class>Casa: {{personaje.casa}}</p>
-            </div>
-            </div>
-        </div><br>
-           
+</div>
+</div>
+</div><br>
+
 </ul> 
+<app-modal></app-modal>
+
+  

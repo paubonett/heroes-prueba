@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { makeStateKey } from '@angular/platform-browser';
 import { Heroe } from '../interface/interface';
 
 
@@ -53,7 +54,8 @@ export class heroecaService{
     casa: "Marvel"
   }
   ]
-
+  
+  
 
 
   get superheroe(): Heroe[] {
@@ -61,7 +63,6 @@ export class heroecaService{
 }
 
 constructor() {}
-
 
 
 }
