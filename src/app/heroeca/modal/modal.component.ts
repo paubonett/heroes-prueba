@@ -7,14 +7,17 @@ import { Heroe } from '../interface/interface';
   templateUrl: './modal.component.html',
 })
 export class ModalComponent {
-  superheroe: Array<Heroe> = [];
+  superheroe: Heroe = {nombre:'', bio:'',img:'', aparicion: '', casa: ''};
 
   constructor(public heroecaService: heroecaService) { 
     
-      this.superheroe = this.heroecaService.superheroe; 
-    
   }
 
- 
+ enviar(nombre:any){
+  this.heroecaService=nombre
+ }
 
+ cargar(personaje:Heroe){
+  this.superheroe = personaje;
+ }
 }

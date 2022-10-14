@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MainpageComponent } from './mainpage/mainpage.component';
 
 import { heroecaService } from './services/heroeca.service';
-import { superheroesComponent } from './superheroes/superheroes.component';
-import { PrinComponent } from './prin/prin.component';
+import { superheroesComponent } from './superheroes/superheroes.component'
 import { ModalComponent } from './modal/modal.component';
+import { CasasComponent } from './casas/casas.component';
 
 
 
@@ -14,9 +14,8 @@ import { ModalComponent } from './modal/modal.component';
   declarations: [
     MainpageComponent,
     superheroesComponent,
-    PrinComponent,
-    ModalComponent
-    
+    ModalComponent,
+    CasasComponent
   ],
   
   imports: [
@@ -24,7 +23,8 @@ import { ModalComponent } from './modal/modal.component';
   ],
   exports: [
     MainpageComponent,
-    ModalComponent
+    ModalComponent,
+    CasasComponent
   ],
   providers:[
     heroecaService
