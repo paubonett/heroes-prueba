@@ -13,10 +13,6 @@ export class ModalComponent {
     
   }
 
- enviar(nombre:any){
-  this.heroecaService=nombre
- }
-
  cargar(personaje:Heroe){
   this.superheroe = personaje;
  }

@@ -10,6 +10,7 @@ import { HeroesModule } from './heroes/heroes.module';
 import { PruebaModule } from './prueba/prueba.module';
 import { ModalComponent } from './heroeca/modal/modal.component';
 import { CasasComponent } from './heroeca/casas/casas.component';
+import { InventarioModule } from './inventario/inventario.module';
 
 
 
@@ -28,7 +29,8 @@ import { CasasComponent } from './heroeca/casas/casas.component';
     DbzModule,
     HeroesModule,
     HeroecaModule,
-    PruebaModule
+    PruebaModule,
+    InventarioModule
     
   ],
   providers: [],

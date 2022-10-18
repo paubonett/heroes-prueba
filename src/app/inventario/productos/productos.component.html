@@ -1,0 +1,57 @@
+
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" 
+  role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+      Inventarios</a>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <li><a class="dropdown-item" (click)="listar('inventario')">inventario1</a></li>
+    <li><a class="dropdown-item" (click)="listar('inventario1')">Marvel</a></li>
+  </ul>
+</div>
+
+<!-- Tabla para mostrar los Datos de cada heroe con respecto a su casa -->
+<table class="table">
+  <thead class="thead-dark">
+      <tr>
+          
+          <th scope="col">Productos</th>
+          
+      </tr>
+  </thead>
+  <tbody>
+    
+      <tr>
+        <div>
+       
+          <tr  *ngFor="let personaje of nuevo;">
+            <div *ngIf="personaje.n=='inventario'" >
+                
+             {{personaje.contador}}
+                <div>
+                <td ><div class="card">
+                  <img src="{{personaje.img}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{personaje.producto}}</h5>
+                    <p class="card-text">{{personaje.contador}}</p>
+      
+                  </div>
+                
+            </div>
+        <td>
+        </div>
+        
+          
+         
+        
+         
+        </div>   
+     
+        </div>
+      
+     </tr>
+    
+  </tbody>
+</table>
+      
+

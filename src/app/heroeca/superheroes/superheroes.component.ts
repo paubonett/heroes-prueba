@@ -1,5 +1,6 @@
-import { verifyHostBindings } from '@angular/compiler';
+
 import { Component, ViewChild } from '@angular/core';
+
 import { Heroe } from '../interface/interface';
 import { ModalComponent } from '../modal/modal.component';
 import { heroecaService } from '../services/heroeca.service';
@@ -15,8 +16,8 @@ import { heroecaService } from '../services/heroeca.service';
 })
 export class superheroesComponent {
 
-  @ViewChild(ModalComponent) modal: any;
- 
+  @ViewChild(ModalComponent) modal!: ModalComponent;
+  
   superheroe: Array<Heroe> = [];
 
   constructor(public heroecaService: heroecaService) {
@@ -28,10 +29,12 @@ export class superheroesComponent {
     this.modal.cargar(personaje);
    }
 
-  /*
-  get superheroe(){
-    return this.heroecaService.superheroe;
+
+   
+ 
   }
-  */
-}
+
+  
+
+
 
