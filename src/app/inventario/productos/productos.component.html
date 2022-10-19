@@ -15,3 +15,9 @@
 
    <button type="button" (click)="almacenar()" >nuevo inventario</button>
    
+   <div class="columna" *ngFor="let prod of productos">
+   <h1>{{prod.producto}}</h1>
+   <button (click)="acumular(base)">{{base}}</button>
+   <span>{{prod.contador}}</span>
+   <button (click)="acumular(-base)"> -{{base}}</button>
+</div>

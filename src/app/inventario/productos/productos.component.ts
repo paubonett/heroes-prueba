@@ -32,12 +32,15 @@ export class ProductosComponent  {
     localStorage.setItem(`${this.contador}`, JSON.stringify(this.nuevo))
   }
 
-   numero: number = 1
+   
  
+   base: number = 1
 
-  acumular(valor:any){
-    
-    this.numero +=valor;
-  }  
+   acumular(valor:number){
+    for (let i:any; i<this.productos.length; i++){
+     this.productos[i].contador = valor;
+    }
+   }
+ 
 
 }
