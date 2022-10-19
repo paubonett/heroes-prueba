@@ -4,6 +4,7 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { ProductosComponent } from './productos/productos.component';
 import { InventarioServece } from './serveces/inventario.service';
 import { ListarComponent } from './listar/listar.component';
+import {MatSelect, MatSelectModule} from '@angular/material/select';
 
 
 
@@ -19,7 +20,8 @@ import { ListarComponent } from './listar/listar.component';
 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatSelectModule
   ],
   providers:[
     InventarioServece

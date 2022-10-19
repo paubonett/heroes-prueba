@@ -11,16 +11,13 @@ import { PruebaModule } from './prueba/prueba.module';
 import { ModalComponent } from './heroeca/modal/modal.component';
 import { CasasComponent } from './heroeca/casas/casas.component';
 import { InventarioModule } from './inventario/inventario.module';
-
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatSelect, MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    
-    
-
-    
+    AppComponent, 
   ],
   imports: [
     BrowserModule,
@@ -30,7 +27,10 @@ import { InventarioModule } from './inventario/inventario.module';
     HeroesModule,
     HeroecaModule,
     PruebaModule,
-    InventarioModule
+    InventarioModule,
+    BrowserAnimationsModule,
+    MatSliderModule, 
+    MatSelectModule
     
   ],
   providers: [],
