@@ -1,12 +1,10 @@
-<mat-form-field appearance="fill">
-    <mat-label>Select an option</mat-label>
-    <mat-select [(value)]="productos">
-      <mat-option >None</mat-option>
-      <mat-option value="1">Option 1</mat-option>
-    </mat-select>
-  </mat-form-field>
+
+<div *ngFor="let inv of inventarios">
+    <h2>{{inv.producto.nombre}}</h2>
+    <img src="{{inv.producto.logotipo}}" >
+</div>
   
-  
+<!--   
     <div class="columna" *ngFor="let prod of productos">
         <img src="{{prod.img}}">
         <p>{{prod.producto}}</p>
@@ -20,4 +18,4 @@
    <button (click)="acumular(base)">{{base}}</button>
    <span>{{prod.contador}}</span>
    <button (click)="acumular(-base)"> -{{base}}</button>
-</div>
+</div> -->

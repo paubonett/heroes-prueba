@@ -1,27 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.component';
+
 import { ProductosComponent } from './productos/productos.component';
-import { InventarioServece } from './serveces/inventario.service';
-import { ListarComponent } from './listar/listar.component';
-import {MatSelect, MatSelectModule} from '@angular/material/select';
-
-
+import { InventarioServece } from './servece/inventario.service';
+import { InventarioComponent } from './inventario/inventario.component';
 
 
 @NgModule({
   declarations: [
-    PaginaPrincipalComponent,
     ProductosComponent,
-    ListarComponent,
+    InventarioComponent
   ],
   exports:[
-    PaginaPrincipalComponent,
-
+    InventarioComponent
   ],
   imports: [
-    CommonModule,
-    MatSelectModule
+    CommonModule
   ],
   providers:[
     InventarioServece

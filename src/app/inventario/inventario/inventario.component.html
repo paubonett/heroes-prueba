@@ -1,0 +1,8 @@
+<select class="form-select">
+        <option selected>Seleccione inventario</option>
+        <option *ngFor="let inventario of inventarios">Inventario{{inventario.id}} </option>
+</select>
+
+<app-productos></app-productos>
+
+<button (click)="Agregrani()"> Nuevo Inventario</button>

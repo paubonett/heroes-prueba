@@ -8,21 +8,18 @@ import { AppComponent } from './app.component';
 
 import { InventarioModule } from './inventario/inventario.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatSelectModule} from '@angular/material/select';
+
+
 
 @NgModule({
   declarations: [
     AppComponent, 
+    
   ],
   imports: [
     BrowserModule,
-   
     InventarioModule,
-    BrowserAnimationsModule,
-    MatSliderModule, 
-    MatSelectModule
-    
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

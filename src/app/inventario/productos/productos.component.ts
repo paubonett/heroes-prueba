@@ -1,6 +1,6 @@
-import { Component, NgModule, ViewChild } from '@angular/core';
-import { Inventario } from '../interface/interface';
-import { InventarioServece } from '../serveces/inventario.service';
+import { Component} from '@angular/core';
+import { Inventario } from '../interface/inventario.interface';
+import { InventarioServece } from '../servece/inventario.service';
 
 
 @Component({
@@ -9,38 +9,18 @@ import { InventarioServece } from '../serveces/inventario.service';
   styleUrls: ['./productos.component.css']
 })
 
-
-
 export class ProductosComponent  {
-  selected:any
-  contador:number
-  productos: Array<Inventario> = []
 
-  nuevo: Array<Inventario> = []
-
-  constructor(public InventarioServece:InventarioServece) {
-    this.productos = this.InventarioServece.inv
-    this.selected = '1'
-    this.contador = 1
+  constructor(public InventarioServece: InventarioServece) {
+    this.inventarios = this.InventarioServece.inv
   }
- 
+
+  inventarios: Inventario[] = [];
+
+
+  
   
 
-  almacenar(){
-
-    this.contador+=1
-    localStorage.setItem(`${this.contador}`, JSON.stringify(this.nuevo))
-  }
-
-   
- 
-   base: number = 1
-
-   acumular(valor:number){
-    for (let i:any; i<this.productos.length; i++){
-     this.productos[i].contador = valor;
-    }
-   }
  
 
 }
