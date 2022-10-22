@@ -16,8 +16,8 @@ export class InventarioServece{
       producto: { nombre: "grapadora", logotipo: './assets/grapadora.png' }
     },
     {
-      id: 2,
-      producto: { nombre: "lapiz", logotipo: './assets/grapadora.png' }
+      id: 3,
+      producto: { nombre: "lapiz", logotipo: './assets/pencil-png.webp' }
     }
   ]
 

@@ -12,7 +12,7 @@ import { InventarioServece } from '../servece/inventario.service';
 
 export class InventarioComponent {
 
-  i: number = 3;
+  i: number = 4;
 
   constructor(public InventarioServece: InventarioServece) {
     this.inventarios = this.InventarioServece.inv
@@ -32,9 +32,10 @@ export class InventarioComponent {
 
     let result = {
       id: this.i++,
+      cantidadp: 1,
       producto: {
-        nombre: 'lapiz',
-        logotipo: './assets/pencil-png.webp'
+        nombre: '',
+        logotipo: ''
       }
     }
 
@@ -44,13 +45,17 @@ export class InventarioComponent {
     console.log(this.inventarios)
     this.almacenar()
   }
+  opc(){
 
-  opc(event:Event){
-    console.log(event)
-    // this.nu = this.inventarios.filter((item)=>{
-    //   return item.id == inventario.id
-    // })
   }
+   nuevo1: Inventario[] = [] 
+ 
+   listar(id: any){
+     this.nuevo1 = this.inventarios.filter((item)=>{
+      console.log
+         return item.id == id;
+     })
+    }
 
   almacenar() {
     localStorage.setItem(`${this.nuevo.id}`, JSON.stringify(this.inventarios))

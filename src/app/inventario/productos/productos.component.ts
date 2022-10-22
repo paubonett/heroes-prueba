@@ -1,6 +1,5 @@
-import { Component} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { Inventario } from '../interface/inventario.interface';
-import { InventarioServece } from '../servece/inventario.service';
 
 
 @Component({
@@ -11,16 +10,37 @@ import { InventarioServece } from '../servece/inventario.service';
 
 export class ProductosComponent  {
 
-  constructor(public InventarioServece: InventarioServece) {
-    this.inventarios = this.InventarioServece.inv
+  
+  @Input() inventarios: Inventario[] = [] 
+  constructor() {
+    
+  }
+  nu: Inventario[] = []
+  valor:number = 1;
+  i:number = 1
+
+  acumula(){
+    
+    console.log(this.valor)
   }
 
-  inventarios: Inventario[] = [];
+  acumular(id: any){
+    this.nu = this.inventarios.filter((item)=>{
+        if(item.id == 1){
+          this.valor += this.i
+          console.log(this.valor, id)
+        }
+        return this.i
+    })
+  }
 
-
-  
-  
-
- 
-
+  restar(id: any){
+    this.nu = this.inventarios.filter((item)=>{
+      if(item.id == id){
+        this.valor -= this.i
+        console.log(this.valor, id)
+      }
+      return this.i
+  })
+  }
 }

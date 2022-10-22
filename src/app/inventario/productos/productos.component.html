@@ -1,9 +1,11 @@
 <h1>Lista de Productos</h1>
-<section class="sec">
+<section class="sec" >
   <div class="sec_padre">
     <div class="sec_hijo" *ngFor="let inv of inventarios">
+      <div *ngIf="inv.id>1">
       <h2>{{ inv.producto.nombre }}</h2>
-      <div><button>-1</button> <button>+1</button></div>
+    </div>
+      <div><button (click)="restar(inv.id)" >-1</button> <button (click)="acumular(inv.id)" >+1</button></div>
     </div>
   </div>
 
@@ -14,6 +16,7 @@
     </div>
   </div>
 </section>
+
 
   
 <!--   
