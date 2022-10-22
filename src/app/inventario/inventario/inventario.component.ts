@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter} from '@angular/core';
 import { Inventario } from '../interface/inventario.interface';
 import { InventarioServece } from '../servece/inventario.service';
 
@@ -13,16 +13,15 @@ import { InventarioServece } from '../servece/inventario.service';
 export class InventarioComponent {
 
   i: number = 3;
- 
+
   constructor(public InventarioServece: InventarioServece) {
     this.inventarios = this.InventarioServece.inv
   }
-
+  nu: Inventario[]=[]
   inventarios: Inventario[] = []
 
   nuevo: Inventario = {
     id: 0,
-    cantidadp: 0,
     producto: {
       nombre: '',
       logotipo: ''
@@ -33,7 +32,6 @@ export class InventarioComponent {
 
     let result = {
       id: this.i++,
-      cantidadp: 1,
       producto: {
         nombre: 'lapiz',
         logotipo: './assets/pencil-png.webp'
@@ -47,7 +45,16 @@ export class InventarioComponent {
     this.almacenar()
   }
 
+  opc(event:Event){
+    console.log(event)
+    // this.nu = this.inventarios.filter((item)=>{
+    //   return item.id == inventario.id
+    // })
+  }
+
   almacenar() {
     localStorage.setItem(`${this.nuevo.id}`, JSON.stringify(this.inventarios))
   }
 }
+
+

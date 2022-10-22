@@ -5,22 +5,23 @@ import { Inventario } from "src/app/inventario/interface/inventario.interface";
 export class InventarioServece{
   public inventario:Inventario[]=[
     {
-      id: 1, 
-      cantidadp: 1,
-      producto: 
-        { nombre: "cuaderno", 
+      id: 1,
+      producto:
+        { nombre: "cuaderno",
         logotipo: './assets/notebook-png.webp'
         },
     },
     {
-      id: 2, 
-      cantidadp: 1,
+      id: 2,
       producto: { nombre: "grapadora", logotipo: './assets/grapadora.png' }
     },
+    {
+      id: 2,
+      producto: { nombre: "lapiz", logotipo: './assets/grapadora.png' }
+    }
   ]
 
   get inv(): Inventario[] {
     return [...this.inventario];
   }
 }
-

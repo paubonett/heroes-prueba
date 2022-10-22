@@ -1,8 +1,20 @@
+<h1>Lista de Productos</h1>
+<section class="sec">
+  <div class="sec_padre">
+    <div class="sec_hijo" *ngFor="let inv of inventarios">
+      <h2>{{ inv.producto.nombre }}</h2>
+      <div><button>-1</button> <button>+1</button></div>
+    </div>
+  </div>
 
-<div *ngFor="let inv of inventarios">
-    <h2>{{inv.producto.nombre}}</h2>
-    <img src="{{inv.producto.logotipo}}" >
-</div>
+  <div class="sec_two">
+    <div class="sec_hijo" *ngFor="let inv of inventarios">
+      <img src="{{ inv.producto.logotipo }}" />
+      <h2>21</h2>
+    </div>
+  </div>
+</section>
+
   
 <!--   
     <div class="columna" *ngFor="let prod of productos">

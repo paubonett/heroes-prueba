@@ -1,6 +1,6 @@
 export interface Inventario {
   id: number;
-  cantidadp: number;
+  
   producto: Producto;
 }
 
